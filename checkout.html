@@ -1,0 +1,50 @@
+<div class="relative h-8"></div>
+<div class="absolute bottom-0 left-0 p-2 w-full flex flex-row lg:flex-col gap-2 items-center justify-center">
+    
+    <!-- Tombol + Keranjang -->
+    <a href="javascript:void(0);" 
+       onclick="addToCart()" 
+       class="bg-[#047D00] font-poppins font-semibold rounded-lg px-4 py-2 border-2 border-[#047D00] text-white text-center w-full hover:bg-white hover:text-[#047D00]">
+        + Keranjang
+    </a>
+
+    <!-- Tombol Beli dengan QRIS -->
+    <a href="javascript:void(0);" 
+       onclick="openQRISModal()" 
+       class="font-poppins font-semibold rounded-lg px-4 py-2 border-2 text-center w-full bg-white text-[#047D00] border-[#047D00] hover:bg-[#047D00] hover:text-white hover:border-white">
+        Beli
+    </a>
+</div>
+
+<!-- Modal QRIS (tersembunyi) -->
+<div id="qrisModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white rounded-lg p-6 max-w-lg w-full text-center">
+        <h2 class="text-xl font-semibold mb-4">Pembayaran QRIS</h2>
+        <p class="mb-4">Scan kode QR di bawah ini untuk menyelesaikan pembayaran</p>
+        <img src="path-to-your-qris-code.png" alt="QRIS Code" class="mx-auto mb-4">
+        <button onclick="closeQRISModal()" class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded">Tutup</button>
+    </div>
+</div>
+
+<script>
+    // Fungsi menambahkan item ke keranjang
+    function addToCart() {
+        // Logika untuk menambahkan item ke daftar belanjaan
+        alert('Item ditambahkan ke keranjang!');
+        // Atau, gunakan localStorage untuk menyimpan daftar sementara
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let item = { id: 1, name: 'Nama Produk', price: 100000 }; // Contoh produk
+        cart.push(item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Fungsi untuk membuka modal QRIS
+    function openQRISModal() {
+        document.getElementById('qrisModal').classList.remove('hidden');
+    }
+
+    // Fungsi untuk menutup modal QRIS
+    function closeQRISModal() {
+        document.getElementById('qrisModal').classList.add('hidden');
+    }
+</script>

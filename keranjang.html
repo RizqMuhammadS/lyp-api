@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="keranjang.css"> <!-- Jika ingin menambahkan file CSS -->
+</head>
+<body>
+
+<div class="cart-container">
+    <div class="cart-header">Keranjang Belanja</div>
+
+    <!-- Daftar item keranjang -->
+    <div id="cart-items"></div>
+
+    <!-- Total harga -->
+    <div id="total-price" class="total-price"></div>
+
+    <!-- Pesan keranjang kosong -->
+    <div id="empty-message" class="empty-message">Keranjang Anda kosong.</div>
+</div>
+
+<!-- Tombol untuk menambahkan item contoh -->
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="addExampleItem()" class="bg-green-500 text-white px-4 py-2 rounded">Tambah Item</button>
+</div>
+
+<script src="keranjang.js"></script> <!-- Menyambungkan file JS eksternal -->
+</body>
+</html>
