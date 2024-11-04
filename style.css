@@ -1,9 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html {
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;/
-  
+/* General button styles */
+.custom-button {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  border-width: 2px;
+  border-radius: 0.375rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  color: grey;
+  background-color: white;
+  cursor: pointer;
 }
+
+.custom-button:hover {
+  background-color: #f5f5f5;
+  color: #035700;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.aspect-square {
+  aspect-ratio: 1/1;
+}
+
+/* SVG fill styles */
+.st14 {
+  fill: #4280EF;
+}
+
+.st15 {
+  fill: #34A353;
+}
+
+.st12 {
+  fill: #F6B704;
+}
+
+.st13 {
+  fill: #E54335;
+}
+
+
+
